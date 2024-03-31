@@ -1,3 +1,7 @@
+<?php
+// Include config file
+require_once "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,19 +44,20 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
+      <!-- Topbar Start -->
+      <div class="container-fluid bg-primary text-white d-none d-lg-flex">
         <div class="container py-3">
             <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">SYNERGIE GROUP</h2>
+                <a href="index.html" style="display: flex; gap: 10px; ">
+                    <img src="./img/logo.png.jpg" alt="logo" style="width: auto; height: 50px;">
+                    <h2 class="text-white fw-bold m-0" style="font-size:larger;">SYNERGIE <br>GROUP</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Mendong Maeture</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>synergiegroup@gmail.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>655548312/680468613</small>
+                    <small class="ms-3"><i class="fa fa-map-marker-alt me-3"></i>Mendong Maeture, Yaounde</small>
+                    <small class="ms-3"><i class="fa fa-envelope me-3"></i>synergiegroup@gmail.com</small>
+                    <small class="ms-3"><i class="fa fa-phone-alt me-3"></i>(+237) 655 548 312 / 680 468 613</small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="https://www.facebook.com/profile.php?id=100092233089707"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
@@ -86,7 +91,6 @@
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="quote.html" class="dropdown-item">Quotation</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
@@ -99,6 +103,52 @@
         </div>
     </div>
     <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7 text-start">
+                                    <p class="fs-4 text-white animated slideInRight">Welcome to <strong>SYNERGIE GROUP</strong></p>
+                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business Grow</h1>
+                                    <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-7 text-end">
+                                    <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>SYNERGIE GROUP</strong></p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your Business</h1>
+                                    <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
 
 
     <!-- Page Header Start -->
@@ -122,40 +172,44 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Contact Us</p>
-                <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
+                <h1 class="display-5 mb-5">If You Have Any Question, Please Contact Us</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">Need a functional contact form?</h3>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <p class="mb-4">The contact form is currently active.<a href="https://htmlcodex.com/contact-form"></a>.</p>
+                    <form action="<?php echo htmlspecialchars($_SERVER[PHP_SELF]); ?>" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo $name; ?>">
+                                    <span class="invalid-feedback"><?php echo $name_err;?></span>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo $email; ?>">
+                                    <span class="invalid-feedback"><?php echo $email_err;?></span>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" name="subject" class="form-control <?php echo (!empty($subject_err)) ? 'is-invalid' : ''; ?>" id="subject" placeholder="Subject" value="<?php echo $subject; ?>">
+                                    <span class="invalid-feedback"><?php echo $subject_err;?></span>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
+                                    <textarea  name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 200px" value="<?php echo $message; ?>"></textarea>
+                                    <span class="invalid-feedback"><?php echo $message_err;?></span>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5" value="Submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -177,7 +231,7 @@
                         </div>
                         <div class="ms-3">
                             <h6>Call Us</h6>
-                            <span>655548312/680468613</span>
+                            <span>(+237) 655 548 312 / 680 468 613</span>
                         </div>
                     </div>
                     <div class="d-flex border-bottom-0 pb-3 mb-3">
@@ -190,10 +244,7 @@
                         </div>
                     </div>
 
-                    <iframe class="w-100 rounded"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
+                   
                 </div>
             </div>
         </div>
@@ -208,11 +259,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Our Office</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mendong Maeture</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>655548312/680468613</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(+237) 655 548 312 / 680 468 613</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>synergiegroup@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100092233089707"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
@@ -236,7 +287,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>login</p>
                     <div class="position-relative w-100">
                         <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
