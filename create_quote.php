@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$name = $email = $subject = $message = "";
-$name_err = $email_err = $subject_err  = $message_err = "";
+$name = $email = $phone = $service = $message = "";
+$name_err = $email_err = $phone_err  = $service_err = $message_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -25,13 +25,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $email = $input_email;
     }
-    
-    // Validate subject
-    $input_subject = trim($_POST["subject"]);
-    if(empty($input_subject)){
-        $subject_err = "Please enter the subject";     
+
+    // Validate phone number
+    $input_phone = trim($_POST["phone"]);
+    if(empty($input_phone)){
+        $phone_err = "Please enter your phone";     
     } else{
-        $subject = $input_subject;
+        $phone = $input_phone;
+    }
+    
+    // Validate service
+    $input_service = trim($_POST["service"]);
+    if(empty($input_service)){
+        $service_err = "Please enter the service";     
+    } else{
+        $service = $input_service;
     }
 
     // Validate message
@@ -43,24 +51,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($email_err) && empty($subject_err) && empty($message_err)){
+    if(empty($name_err) && empty($email_err) && empty($phone_err) && empty($service_err) && empty($message_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO contact_messages (Username, Email, Subject, Message) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO quote_requests (Username, Email, Phone, Service, Message) VALUES (?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_email, $param_subject, $param_message);
+mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_email, $param_phone, $param_service, $param_message);
             
             // Set parameters
             $param_name = $name;
             $param_email = $email;
-            $param_subject = $subject;
+            $param_phone = $phone;
+            $param_service = $service;
             $param_message = $message;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                header("location: contact.php");
+                header("location: quote.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";

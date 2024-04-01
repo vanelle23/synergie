@@ -1,3 +1,7 @@
+<?php
+// Include config file
+require_once "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +67,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
@@ -78,15 +81,15 @@
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Services</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="project.html" class="nav-item nav-link">Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="quote.php" class="dropdown-item">Quotation</a>
+                                <a href="quote.php" class="dropdown-item active">Quotation</a>
                             </div>
                         </div>
                         <a href="contact.php" class="nav-item nav-link">Contact</a>
@@ -99,64 +102,63 @@
         </div>
     </div>
     <!-- Navbar End -->
-     <!-- Carousel Start -->
-     <div class="container-fluid px-0 mb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.2.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-start">
-                                <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Welcome to <strong>SYNERGIE GROUP</strong></p>
-                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business Grow</h1>
-                                    <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>SYNERGIE GROUP</strong></p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your Business</h1>
-                                    <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a>
-                                </div>
+   <!-- Carousel Start -->
+   <div class="container-fluid px-0 mb-5">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="img/carousel-1.2.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 text-start">
+                                <p class="fs-4 text-white animated slideInRight">Welcome to <strong>SYNERGIE GROUP</strong></p>
+                                <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business Grow</h1>
+                                <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-7 text-end">
+                                <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>SYNERGIE GROUP</strong></p>
+                                <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your Business</h1>
+                                <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <!-- Carousel End -->
-
+</div>
+<!-- Carousel End -->
 
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Services</h1>
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Quote</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Services</li>
+                    <li class="breadcrumb-item text-primary" aria-current="page">Quote</li>
                 </ol>
             </nav>
         </div>
@@ -164,115 +166,76 @@
     <!-- Page Header End -->
 
 
-    <!-- Service Start -->
+    <!-- Quote Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Services</p>
-                <h1 class="display-5 mb-5">Marketing Agency Services that We Offer</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Marketing Agency</h4>
-                            <p class="mb-0">It is a company that helps businesses promote their products through various marketing strategies </p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="fs-5 fw-medium text-primary">Get A Quote</p>
+                    <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
+                    <p>your solutions starts here with our experts,trust them to guide you.</p>
+                    <p class="mb-4">Let our experts lead the way.</p>
+                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary" href="">
+                        <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </span>
+                        <span class="fs-5 fw-medium mx-4">(+237) 655 548 312 / 680 468 613</span>
+                    </a>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <h2 class="mb-4">Get A Free Quote</h2>
+                        <form action="create_quote.php" method="post">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo $name; ?>">
+                                    <span class="invalid-feedback"><?php echo $name_err;?></span>
+                                    <label for="name">Your Name</label>
+                                </div>
                             </div>
-                            <h5 class="mb-3">Training and consulting</h4>
-                            <p class="mb-0">it provides services to help businesses improve their performance and achieve their goals</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo $email; ?>">
+                                    <span class="invalid-feedback"><?php echo $email_err;?></span>
+                                    <label for="mail">Your Email</label>
+                                </div>
                             </div>
-                            <h5 class="mb-3">Real estate</h4>
-                            <p class="mb-0">it improves the buying,selling and renting properties such as homes,commercial buildings and land. </p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" name="phone" class="form-control <?php echo (!empty($phone_err)) ? 'is-invalid' : ''; ?>" id="phone" placeholder="Your phone number" value="<?php echo $phone; ?>">
+                                    <span class="invalid-feedback"><?php echo $phone_err;?></span>
+                                    <label for="phone">Your Number</label>
+                                </div>
                             </div>
-                            <h5 class="mb-3">Human resource and Management</h4>
-                            <p class="mb-0">it involves overseeing the recruitement,training, and development of employees within the organisation</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <select name="service" class="form-select <?php echo (!empty($service_err)) ? 'is-invalid' : ''; ?>" id="service" value="<?php echo $service; ?>">
+                                        <option selected>Marketing Agency</option>
+                                        <option value="">Training and Consulting</option>
+                                        <option value="">Real estate</option>
+                                        <option value="">Human Resource and Management</option>
+                                    </select>
+                                    <span class="invalid-feedback"><?php echo $service_err;?></span>
+                                    <label for="service">Choose A Service</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 130px" value="<?php echo $message; ?>"></textarea>
+                                    <span class="invalid-feedback"><?php echo $message_err;?></span>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary w-100 py-3" value="Submit" type="submit">Submit Now</button>
+                            </div>
+                        </form>
                     </div>
-                </div>
-               
-                           
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
-
-
-   <!-- Testimonial Start -->
-   <div class="container-xxl pt-5">
-    <div class="container">
-        <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-medium text-primary">Testimonial</p>
-            <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                <img class="mb-4" src="img/testimonial1.jpg" alt="">
-                <p class="mb-4">SYNERGIE GROUP est une equipe qualifie possede une  solide connaissance des lois du travail,des reglementations et des meilleures pratiques en matiere de contrats.</p>
-                <h5>Mlle NGO</h5>
-                <span class="text-primary">secretaire</span>
-            </div>
-            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                <img class="mb-4" src="img/testimonial2.jpg" alt="">
-                <p class="mb-4">Avec SYNERGIE GROUP nous comprenons que chaque entreprise et chaque situation est unique.Ils offrent des contrat sur mesure, adaptes a vos besoins. </p>
-                <h5>Mlle TCHAHO</h5>
-                <span class="text-primary">Commerciante</span>
-            </div>
-            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                <img class="mb-4" src="img/testimonial3.jpg" alt="">
-                <p class="mb-4">SYNERGIE GROUP veille a ce que chaque clause soit redigee avec precision, evitant ainsi les ambiguites et les litiges potentiels</p>
-                <h5>Mme MOKO</h5>
-                <span class="text-primary">Commerciante</span>
-            </div>
-            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                <img class="mb-4" src="img/testimonial4.jpg" alt="">
-                <p class="mb-4">Avec SYNERGIE GROUP vos informations restent strictement confidentielles.</p>
-                <h5>Mr TCHADE</h5>
-                <span class="text-primary">Technicien</span>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+    <!-- Quote Start -->
         
 
     <!-- Footer Start -->
@@ -302,7 +265,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Business Hours</h4>
                     <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">08:00 am - 07:00 pm</h6>
+                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
                     <p class="mb-1">Saturday</p>
                     <h6 class="text-light">09:00 am - 12:00 pm</h6>
                     <p class="mb-1">Sunday</p>
@@ -355,3 +318,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
+</html>

@@ -90,10 +90,10 @@ require_once "config.php";
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="quote.html" class="dropdown-item">Quotation</a>
+                                <a href="quote.php" class="dropdown-item">Quotation</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="contact.php" class="nav-item nav-link active">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
@@ -178,7 +178,7 @@ require_once "config.php";
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">Need a functional contact form?</h3>
                     <p class="mb-4">The contact form is currently active.<a href="https://htmlcodex.com/contact-form"></a>.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER[PHP_SELF]); ?>" method="post">
+                    <form action="create_message.php" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -209,7 +209,7 @@ require_once "config.php";
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" value="Submit">Send Message</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5" value="Submit" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -256,7 +256,7 @@ require_once "config.php";
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Our Office</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mendong Maeture</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(+237) 655 548 312 / 680 468 613</p>
@@ -268,7 +268,7 @@ require_once "config.php";
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
@@ -276,7 +276,7 @@ require_once "config.php";
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Business Hours</h4>
                     <p class="mb-1">Monday - Friday</p>
                     <h6 class="text-light">08:00 am - 06:00 pm</h6>
@@ -285,14 +285,14 @@ require_once "config.php";
                     <p class="mb-1">Sunday</p>
                     <h6 class="text-light">Closed</h6>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Newsletter</h4>
                     <p>login</p>
                     <div class="position-relative w-100">
                         <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
