@@ -184,32 +184,32 @@ require_once "config.php";
                 </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <h2 class="mb-4">Get A Free Quote</h2>
-                        <form action="create_quote.php" method="post">
+                        <form action="./create_quote.php" method="post">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo $name; ?>">
+                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo isset($name) ? $name : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $name_err;?></span>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo $email; ?>">
+                                    <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo isset($email) ? $email : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $email_err;?></span>
                                     <label for="mail">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" name="phone" class="form-control <?php echo (!empty($phone_err)) ? 'is-invalid' : ''; ?>" id="phone" placeholder="Your phone number" value="<?php echo $phone; ?>">
+                                    <input type="text" name="phone" class="form-control <?php echo (!empty($phone_err)) ? 'is-invalid' : ''; ?>" id="phone" placeholder="Your phone number" value="<?php echo isset($phone) ? $phone : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $phone_err;?></span>
                                     <label for="phone">Your Number</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <select name="service" class="form-select <?php echo (!empty($service_err)) ? 'is-invalid' : ''; ?>" id="service" value="<?php echo $service; ?>">
+                                    <select name="service" class="form-select <?php echo (!empty($service_err)) ? 'is-invalid' : ''; ?>" id="service" value="<?php echo isset($service) ? $service : ''; ?>">
                                         <option selected>Marketing Agency</option>
                                         <option value="">Training and Consulting</option>
                                         <option value="">Real estate</option>
@@ -221,7 +221,7 @@ require_once "config.php";
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 130px" value="<?php echo $message; ?>"></textarea>
+                                    <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 130px" value="<?php echo isset($message) ? $message : ''; ?>"></textarea>
                                     <span class="invalid-feedback"><?php echo $message_err;?></span>
                                     <label for="message">Message</label>
                                 </div>

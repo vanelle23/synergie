@@ -182,28 +182,28 @@ require_once "config.php";
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo $name; ?>">
+                                    <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" id="name" placeholder="Your Name" value="<?php echo isset($name) ? $name : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $name_err;?></span>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo $email; ?>">
+                                    <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" id="email" placeholder="Your Email" value="<?php echo isset($email) ? $email : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $email_err;?></span>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" name="subject" class="form-control <?php echo (!empty($subject_err)) ? 'is-invalid' : ''; ?>" id="subject" placeholder="Subject" value="<?php echo $subject; ?>">
+                                    <input type="text" name="subject" class="form-control <?php echo (!empty($subject_err)) ? 'is-invalid' : ''; ?>" id="subject" placeholder="Subject" value="<?php echo isset($subject) ? $subject : ''; ?>">
                                     <span class="invalid-feedback"><?php echo $subject_err;?></span>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea  name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 200px" value="<?php echo $message; ?>"></textarea>
+                                    <textarea  name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>" placeholder="Leave a message here" id="message" style="height: 200px" value="<?php echo isset($message) ? $message : ''; ?>"></textarea>
                                     <span class="invalid-feedback"><?php echo $message_err;?></span>
                                     <label for="message">Message</label>
                                 </div>
