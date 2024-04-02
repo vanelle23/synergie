@@ -92,7 +92,7 @@ require_once "config.php";
                                 <a href="quote.php" class="dropdown-item active">Quotation</a>
                             </div>
                         </div>
-                        <a href="contact.php" class="nav-item nav-link">Contact</a>
+                        <a href="contact.php#contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
@@ -182,7 +182,7 @@ require_once "config.php";
                         <span class="fs-5 fw-medium mx-4">(+237) 655 548 312 / 680 468 613</span>
                     </a>
                 </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s"  id="quote">
                         <h2 class="mb-4">Get A Free Quote</h2>
                         <form action="./create_quote.php" method="post">
                         <div class="row g-3">

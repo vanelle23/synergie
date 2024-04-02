@@ -96,7 +96,7 @@ require_once "config.php";
                         <a href="contact.php" class="nav-item nav-link active">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
+                        <a href="quote.php#quote" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
                     </div>
                 </div>
             </nav>
@@ -169,7 +169,7 @@ require_once "config.php";
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container" id="contact">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Contact Us</p>
                 <h1 class="display-5 mb-5">If You Have Any Question, Please Contact Us</h1>
